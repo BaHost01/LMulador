@@ -1,23 +1,24 @@
-# package.json
-```json
 {
   "name": "lmulador",
   "version": "0.1.0",
-  "private": true,
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.bahost.lmulador",
+    "files": ["src/**/*","public/**/*","renderer/**/*","vm/**/*","cli/**/*","emu/**/*"]
   },
   "dependencies": {
     "electron": "^25.0.0",
     "xterm": "^5.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "tailwindcss": "^3.0.0"
+    "tailwindcss": "^3.0.0",
+    "postcss": "^8.0.0"
   },
   "devDependencies": {
-    "electron-builder": "^23.0.0",
-    "@babel/core": "^7.0.0"
+    "electron-builder": "^23.0.0"
   }
 }
